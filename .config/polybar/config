@@ -44,7 +44,6 @@ volume-max = #bf616a
 ############                  MAINBAR-BSPWM                         ############
 ################################################################################
 ################################################################################
-
 [bar/mainbar-bspwm]
 monitor = eDP-1
 ;monitor-fallback = HDMI1
@@ -80,8 +79,6 @@ border-color = #00000000
 padding-left = 1
 padding-right = 0
 
-module-margin-left = 0
-module-margin-right = 0
 
 ;https://github.com/jaagr/polybar/wiki/Fonts
 font-0 = "Hack:size=10;2"
@@ -89,10 +86,12 @@ font-1 = "Hack:size=15;3"
 font-2 = "Font Awesome 5 Free:style=Regular:pixelsize=8;1"
 font-3 = "Font Awesome 5 Free:style=Solid:pixelsize=8;1"
 font-4 = "Font Awesome 5 Brands:pixelsize=8;1"
+font-5 =  "Font Awesome 5 Free:style=Regular:pixelsize=12;1"
 
-modules-left = bspwm xwindow
+
+modules-left = rofimenu bspwm xwindow
 modules-center = 
-modules-right = arrow1 battery arrow2 pavolume arrow3 date
+modules-right = archupdates battery pavolume date
 
 tray-detached = false
 tray-offset-x = 0
@@ -145,7 +144,7 @@ ws-icon-7 = 8;mail
 ws-icon-8 = 9;media 
 
 # ws-icon-default = " "
-ws-icon-default = "d"
+ws-icon-default = "no-name"
 
 format = <label-state> <label-mode>
 
@@ -156,15 +155,15 @@ label-focused-padding = 2
 label-focused-foreground = ${colors.foreground}
 
 label-occupied = %icon%
-label-occupied-padding = 2
+label-occupied-padding = 1
 label-occupied-background = ${colors.background}
 
 label-urgent = !%icon%!
-label-urgent-padding = 2
+label-urgent-padding = 1
 
 label-empty = %icon%
-label-empty-foreground = ${colors.foreground}
-label-empty-padding = 2
+label-empty-foreground = #4A4A4A
+label-empty-padding = 1
 label-empty-background = ${colors.background}
 label-monocle = "  "
 label-monocle-foreground = ${colors.foreground}
@@ -308,6 +307,9 @@ battery = BAT0
 adapter = AC0
 full-at = 100
 
+format-charging-padding = 1
+format-discharging-padding = 1
+format-full-padding = 1
 format-charging = <animation-charging> <label-charging>
 label-charging = %percentage%%
 format-charging-foreground = #fefefe
@@ -772,8 +774,30 @@ scroll-up = ~/.config/polybar/scripts/pavolume.sh --up
 scroll-down = ~/.config/polybar/scripts/pavolume.sh --down
 format-foreground = #fefefe
 format-background = #668bd7
+format-padding = 1
 
+################################################################################
 
+[module/archupdates]
+type = custom/script 
+exec = ~/.config/polybar/scripts/countupdates.sh 
+click-left = pacman -Syyu --noconfirm
+label =  %output%
+format-foreground = #fefefe
+format-background = #668bd7
+format-padding = 1
+tail = true 
+
+################################################################################
+
+[module/rofimenu]
+type = custom/text 
+content-font = 4
+content = "   "
+content-foreground = ${colors.foreground}
+content-background = ${colors.background}
+format-content-padding = 1
+click-left = rofi -show combi
 
 ################################################################################
 
