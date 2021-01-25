@@ -48,6 +48,8 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}     "C++ Autocomplete
 Plug 'itchyny/lightline.vim'                        "Lightline (Bottom Status bar)
 Plug 'jiangmiao/auto-pairs'                         " Auto bracket/quote closer
 
+Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']} " Live Markdown Preview
+
 " Colorthemes
 Plug 'kaicataldo/material.vim', { 'branch': 'main' }
 
@@ -76,6 +78,11 @@ endif
 let g:material_terminal_italics = 1
 let g:material_theme_style = 'darker'
 colorscheme material
+
+
+" Markdown Preview 
+let g:mkdp_auto_start = 1 " Autostart markdown preview when opening markdown file 
+let g:mkdp_auto_close = 1 " Autoclose markdown preview when closing markdown file 
 
 
 

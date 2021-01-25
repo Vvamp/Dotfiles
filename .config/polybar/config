@@ -149,7 +149,7 @@ ws-icon-default = "d"
 
 format = <label-state> <label-mode>
 
-label-focused = %icon%
+label-focused = [%icon%]
 label-focused-background = ${colors.background}
 label-focused-underline= #7d4ab0
 label-focused-padding = 2
@@ -159,7 +159,7 @@ label-occupied = %icon%
 label-occupied-padding = 2
 label-occupied-background = ${colors.background}
 
-label-urgent = %icon%
+label-urgent = !%icon%!
 label-urgent-padding = 2
 
 label-empty = %icon%
