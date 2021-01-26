@@ -4,16 +4,19 @@
 padding=0
 
 # Autostart
+#fixwifi $ 				    # Crashes
 sxhkd & 
 picom & 
 dunst &
+redshift -l 52.007229:5.556170 &
 nitrogen --restore & 
 polybar mainbar-bspwm & 
 polybar bspwm_two & 
 
 # Misc Settings
 xsetroot -cursor_name left_ptr &    # Make sure to keep the cursor a pointer when not on window
-xinput set-prop 14 306 1	    # Set natural scrolling to true
+xinput set-prop 'ELAN1300:00 04F3:3057 Touchpad' 304 1 # Set mousepad
+xinput set-prop 'ELAN1300:00 04F3:3057 Touchpad' 322 1 # Enable tapping
 
 
 # Monitors
@@ -51,3 +54,8 @@ bspc config presel_feedback_color	      "#5e81ac"
 
 # App Specific
 bspc rule -a "GeForce NOW" state=floating 
+bspc rule -a "Firefox" desktop='^2'
+bspc rule -a "Discord" desktop='^5'
+bspc rule -a "Signal" desktop='^6'
+bspc rule -a "spotify" desktop='^7'
+bspc rule -a "celluloid" desktop='^9'
