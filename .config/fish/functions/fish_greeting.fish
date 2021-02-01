@@ -9,5 +9,6 @@ function fish_greeting
  echo "Welcome, Vincent"
  echo "You have $email."
  echo ""
- echo "\"$quote\""
+ #echo "\"$quote\""
+ cat ~/todo.txt
 end

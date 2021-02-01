@@ -795,7 +795,7 @@ format-padding = 1
 [module/archupdates]
 type = custom/script 
 exec = ~/.config/polybar/scripts/countupdates.sh 
-click-left = pacman -Syyu --noconfirm
+click-left = ~/.config/polybar/scripts/arch-update.sh
 label =  %output%
 format-foreground = #fefefe
 format-background = #668bd7

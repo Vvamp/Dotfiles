@@ -10,6 +10,7 @@ set showbreak=+++ 	" Wrap-broken line prefix
 set textwidth=100	" Line wrap (number of cols)
 set showmatch	    " Highlight matching brace
 set visualbell	    " Use visual bell (no beeping)
+set mouse=a	    " Enable mouse in vim
 
 set foldmethod=indent
 
