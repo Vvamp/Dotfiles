@@ -4,7 +4,7 @@
 
 set nocompatible    " Distro hands off
 
-set number	        " Show line numbers
+set relativenumber number	        " Show line numbers
 set linebreak	    " Break lines at word (requires Wrap lines)
 set showbreak=+++ 	" Wrap-broken line prefix
 set textwidth=100	" Line wrap (number of cols)
@@ -41,6 +41,12 @@ let @a='YP'
 nnoremap <silent> <C-d> @a <CR>
 
 set noshowmode " Hide the MODE. It's already in the statusline 
+
+" Disable arrow keys
+noremap <Up> <Nop>
+noremap <Down> <Nop>
+noremap <Left> <Nop>
+noremap <Right> <Nop>
 
 " Plugins
 call plug#begin('~/.nvim/plugged')
@@ -82,9 +88,9 @@ colorscheme material
 
 
 " Markdown Preview 
-let g:mkdp_auto_start = 1 " Autostart markdown preview when opening markdown file 
+let g:mkdp_auto_start = 0 " Autostart markdown preview when opening markdown file 
 let g:mkdp_auto_close = 1 " Autoclose markdown preview when closing markdown file 
 
-
+highlight CursorLineNr guifg=orange "Set current cursor line color to orange 
 
 nmap <F9> :NERDTreeToggle<CR>
