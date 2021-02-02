@@ -54,7 +54,12 @@ noremap <Right> <Nop>
 " Plugins
 call plug#begin('~/.nvim/plugged')
 Plug 'scrooloose/nerdtree'	                        " File explorer in VIM
-Plug 'neoclide/coc.nvim', {'branch': 'release'}     "C++ Autocomplete
+"Plug 'neoclide/coc.nvim', {'branch': 'release'}		"C++ Autocomplete 
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' } " Autocomplete
+Plug 'Shougo/deoplete-clangx'					"C++ Autocomplete
+Plug 'deoplete-plugins/deoplete-jedi'				" Python Autocomplete 
+Plug 'dense-analysis/ale'				" C++ Lintinng
+Plug 'sbdchd/neoformat'					" Formatting
 Plug 'itchyny/lightline.vim'                        "Lightline (Bottom Status bar)
 Plug 'jiangmiao/auto-pairs'                         " Auto bracket/quote closer
 
@@ -89,6 +94,24 @@ let g:material_terminal_italics = 1
 let g:material_theme_style = 'darker'
 colorscheme material
 
+" C++ Formatting 
+let g:deoplete#enable_at_startup = 1
+
+" C++ Linting 
+let g:ale_linters = {
+    \ 'python': ['pylint'],
+    \ 'vim': ['vint'],
+    \ 'cpp': ['clang'],
+    \ 'c': ['clang']
+\}
+" C++ Formatting 
+"custom setting for clangformat
+let g:neoformat_cpp_clangformat = {
+    \ 'exe': 'clang-format',
+    \ 'args': ['--style="{IndentWidth: 4}"']
+\}
+let g:neoformat_enabled_cpp = ['clangformat']
+let g:neoformat_enabled_c = ['clangformat']
 
 " Markdown Preview 
 let g:mkdp_auto_start = 0 " Autostart markdown preview when opening markdown file 
