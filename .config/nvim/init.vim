@@ -51,6 +51,8 @@ noremap <Right> <Nop>
 "" Bind F9 to nerd tree
 nmap <F9> :NERDTreeToggle<CR>
 
+"" Bind ctrl+shift+i to format
+nmap <C-S-i> :Neoformat<CR>
 " Plugins
 call plug#begin('~/.nvim/plugged')
 
