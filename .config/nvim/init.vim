@@ -40,6 +40,9 @@ nnoremap <silent> <C-i> :noh <CR>
 let @a='YP'
 nnoremap <silent> <C-d> @a <CR>
 
+" Bind Capital R with replace all
+nnoremap R :%s//g<Left><Left>
+
 set noshowmode " Hide the MODE. It's already in the statusline 
 
 " Disable arrow keys
