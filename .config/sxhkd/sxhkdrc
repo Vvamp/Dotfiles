@@ -162,3 +162,8 @@ super + {Left,Down,Up,Right}
 super + shift + m 
 	firefox & 
 
+# Applications
+## Launch Rofimoji 
+super + e 
+	rofimoji
+
