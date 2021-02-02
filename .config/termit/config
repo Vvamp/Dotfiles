@@ -1,0 +1,78 @@
+#Vvamp's termite config
+[options]
+allow_bold = true
+#audible_bell = false
+#bold_is_bright = true
+#cell_height_scale = 1.0
+#cell_width_scale = 1.0
+clickable_url = true
+dynamic_title = true
+font = Twemoji 11
+font =  Knack Nerd Font 11
+#fullscreen = true
+#icon_name = terminal
+#mouse_autohide = false
+scroll_on_output = true
+scroll_on_keystroke = true
+# Length of the scrollback buffer, 0 disabled the scrollback buffer
+# and setting it to a negative value means "infinite scrollback"
+scrollback_lines = 20000
+#search_wrap = true
+#urgent_on_bell = true
+#hyperlinks = false
+
+# $BROWSER is used by default if set, with xdg-open as a fallback
+browser = firefox
+
+# "system", "on" or "off"
+cursor_blink = system
+
+# "block", "underline" or "ibeam"
+cursor_shape = block
+
+# Hide links that are no longer valid in url select overlay mode
+#filter_unmatched_urls = true
+
+# Emit escape sequences for extra modified keys
+#modify_other_keys = false
+
+# set size hints for the window
+#size_hints = false
+
+# "off", "left" or "right"
+#scrollbar = off
+
+# ====================================
+
+[colors]
+# https://www.reddit.com/r/unixporn/comments/4rdjmh/terminal_color_schemes/
+# special
+foreground      = #ffffff
+foreground_bold = #ffffff
+cursor          = #ffffff
+#background      = #151515
+background       =rgba(21, 21, 21,  0.84)
+# black
+color0  = #252525
+color8  = #252525
+# red
+color1  = #f8f8f8
+color9  = #f8f8f8
+# green
+color2  = #0084FF
+color10 = #0084FF
+# yellow
+color3  = #f7f7f7
+color11 = #f7f7f7
+# blue
+color4  = #606060
+color12 = #606060
+# magenta
+color5  = #0084FF
+color13 = #0084FF
+# cyan
+color6  = #e2e2e2
+color14 = #e2e2e2
+# white
+color7  = #ffffff
+color15 = #ffffff
