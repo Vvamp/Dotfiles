@@ -126,4 +126,6 @@ let g:neoformat_enabled_c = ['clangformat']
 let g:mkdp_auto_start = 0 " Autostart markdown preview when opening markdown file 
 let g:mkdp_auto_close = 1 " Autoclose markdown preview when closing markdown file 
 
+"" Jedi path for discordpy
+let g:deoplete#sources#jedi#extra_path = ['/home/vvamp/.local/lib/python3.9/site-packages/discord']
 

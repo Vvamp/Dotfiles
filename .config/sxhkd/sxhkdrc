@@ -24,9 +24,9 @@ alt + Tab
 super + l
 	env XSECURELOCK_SAVER=saver_xscreensaver xsecurelock
 
-# Power Menu
+# Print screen 
 super + p
-	powermenu
+	scrot $HOME/Pictures/Screenshots/%Y-%m-%d.png 
 
 # Screenshot
 Print 
