@@ -10,7 +10,7 @@ set nocompatible    " Distro hands off
 set relativenumber number	        " Show line numbers
 set linebreak	    " Break lines at word (requires Wrap lines)
 set showbreak=+++ 	" Wrap-broken line prefix
-set textwidth=100	" Line wrap (number of cols)
+set textwidth=120	" Line wrap (number of cols)
 set showmatch	    " Highlight matching brace
 set visualbell	    " Use visual bell (no beeping)
 set mouse=a	    " Enable mouse in vim
@@ -32,6 +32,9 @@ set noshowmode " Hide the MODE. It's already in the statusline
 
 
 " Key Bindings 
+"" Bind ctrl+shift+i to format
+nmap <S-i> :Neoformat<CR>
+
 "" Map screen clear(hightlighting) to Control + I
 nnoremap <silent> <C-i> :noh <CR>
 
@@ -51,8 +54,6 @@ noremap <Right> <Nop>
 "" Bind F9 to nerd tree
 nmap <F9> :NERDTreeToggle<CR>
 
-"" Bind ctrl+shift+i to format
-nmap <C-S-i> :Neoformat<CR>
 " Plugins
 call plug#begin('~/.nvim/plugged')
 
@@ -111,7 +112,8 @@ let g:ale_linters = {
     \ 'python': ['pylint'],
     \ 'vim': ['vint'],
     \ 'cpp': ['clang'],
-    \ 'c': ['clang']
+    \ 'c': ['clang'],
+    \ 'html': ['alex']
 \}
 
 """ C++ Formatting 
@@ -121,6 +123,9 @@ let g:neoformat_cpp_clangformat = {
 \}
 let g:neoformat_enabled_cpp = ['clangformat']
 let g:neoformat_enabled_c = ['clangformat']
+
+""" HTML Formatting 
+let g:neoformat_enabled_html = ['html-beautify']
 
 "" Markdown Preview 
 let g:mkdp_auto_start = 0 " Autostart markdown preview when opening markdown file 
