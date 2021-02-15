@@ -32,8 +32,12 @@ set noshowmode " Hide the MODE. It's already in the statusline
 
 
 " Key Bindings 
-"" Bind ctrl+shift+i to format
+"" Bind shift+i to format
 nmap <S-i> :Neoformat<CR>
+
+"" Bind ctrl+h to format html 
+nmap <C-h> :Neoformat jsbeautify<CR>
+
 
 "" Map screen clear(hightlighting) to Control + I
 nnoremap <silent> <C-i> :noh <CR>
@@ -116,6 +120,22 @@ let g:ale_linters = {
     \ 'html': ['alex']
 \}
 
+""" General Formatting 
+""""Enable alignment
+let g:neoformat_basic_format_align = 1
+
+"""" Enable tab to spaces conversion
+let g:neoformat_basic_format_retab = 1
+
+"""" Enable trimmming of trailing whitespace
+let g:neoformat_basic_format_trim = 1
+
+"""" Mute non-fatal output
+let g:neoformat_only_msg_on_error = 1
+
+""" HTML Formatting 
+let g:neoformat_enabled_html = ['jsbeautify']
+
 """ C++ Formatting 
 let g:neoformat_cpp_clangformat = {
     \ 'exe': 'clang-format',
@@ -124,8 +144,7 @@ let g:neoformat_cpp_clangformat = {
 let g:neoformat_enabled_cpp = ['clangformat']
 let g:neoformat_enabled_c = ['clangformat']
 
-""" HTML Formatting 
-let g:neoformat_enabled_html = ['html-beautify']
+
 
 "" Markdown Preview 
 let g:mkdp_auto_start = 0 " Autostart markdown preview when opening markdown file 
