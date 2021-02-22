@@ -7,10 +7,10 @@ padding=0
 #fixwifi $ 				    # Crashes
 sxhkd & 
 picom & 
+polybar mainbar-bspwm & 
 dunst &
 redshift -l 52.007229:5.556170 &
 nitrogen --restore & 
-polybar mainbar-bspwm & 
 
 # If a ssecond monitor is connected, open second bar
 second_mon_connection=`xrandr -- query | grep "HDMI-2" | awk '{print $2}'`
@@ -21,12 +21,13 @@ fi
 
 # Misc Settings
 xsetroot -cursor_name left_ptr &    # Make sure to keep the cursor a pointer when not on window
-xinput set-prop 'ELAN1300:00 04F3:3057 Touchpad' 304 1 # Set mousepad
-xinput set-prop 'ELAN1300:00 04F3:3057 Touchpad' 322 1 # Enable tapping
+xinput set-prop 'ELAN1300:00 04F3:3057 Touchpad' "libinput Tapping Enabled" 1 # Set Tapping
+xinput set-prop 'ELAN1300:00 04F3:3057 Touchpad' "libinput Natural Scrolling Enabled" 1 # Enable Natural Scrolling
+
 
 
 # Monitors
-bspc monitor eDP-1 -d 1 2 3 4 5 6 7 8 9 
+bspc monitor eDP-1-1 -d 1 2 3 4 5 6 7 8 9 
 
 # Config
 bspc config border_width         2	    # Width of window border
