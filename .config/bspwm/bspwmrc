@@ -4,13 +4,14 @@
 padding=0
 
 # Autostart
-#fixwifi $ 				    # Crashes
 sxhkd & 
 picom & 
 polybar mainbar-bspwm & 
 dunst &
 redshift -l 52.007229:5.556170 &
 nitrogen --restore & 
+
+termite & # Launch a terminal by default 
 
 # If a ssecond monitor is connected, open second bar
 second_mon_connection=`xrandr -- query | grep "HDMI-2" | awk '{print $2}'`

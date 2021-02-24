@@ -45,7 +45,7 @@ volume-max = #bf616a
 ################################################################################
 ################################################################################
 [bar/mainbar-bspwm]
-monitor = eDP-1
+monitor = eDP-1-1
 ;monitor-fallback = HDMI1
 width = 100%
 height = 25 
@@ -91,7 +91,7 @@ font-5 =  "Font Awesome 5 Free:style=Regular:pixelsize=12;1"
 
 modules-left = rofimenu bspwm xwindow
 modules-center = 
-modules-right = doge redshift archupdates battery pavolume date
+modules-right = btc doge redshift archupdates battery pavolume date
 
 tray-detached = false
 tray-offset-x = 0
@@ -114,7 +114,7 @@ monitor = HDMI-2
 
 modules-left = bspwm xwindow 
 modules-center = 
-modules-right = doge date 
+modules-right = btc doge date 
 
 width = 100%
 height = 25 
@@ -1199,10 +1199,20 @@ format-background = ${colors.background}
 #####################
 [module/doge]
 type = custom/script 
-interval = 60 
+interval = 30 
 exec =  ~/.config/polybar/scripts/doge.sh
-label =  %output%
+label =  DOGE %output%
 format-foreground = #fefefe
 format-background = #668bd7
+format-padding = 1
+tail = true 
+
+[module/btc]
+type = custom/script 
+interval = 30 
+exec =  ~/.config/polybar/scripts/btc.sh
+label =  BTC %output%
+format-foreground = #fefefe
+format-background = #8d62ad
 format-padding = 1
 tail = true 
