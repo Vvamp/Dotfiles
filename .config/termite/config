@@ -7,6 +7,7 @@ allow_bold = true
 #cell_width_scale = 1.0
 clickable_url = true
 dynamic_title = true
+font = IPAGothic 11
 font = Twemoji 11
 font =  Knack Nerd Font 11
 #fullscreen = true
@@ -22,7 +23,7 @@ scrollback_lines = 20000
 #hyperlinks = false
 
 # $BROWSER is used by default if set, with xdg-open as a fallback
-browser = firefox
+browser = qutebrowser
 
 # "system", "on" or "off"
 cursor_blink = system
