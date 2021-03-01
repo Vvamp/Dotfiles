@@ -861,7 +861,7 @@ content = "   "
 content-foreground = ${colors.foreground}
 content-background = ${colors.background}
 format-content-padding = 1
-click-left = rofi -show combi
+click-left = power
 
 ################################################################################
 

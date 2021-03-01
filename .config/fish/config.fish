@@ -4,3 +4,5 @@ export MANPAGER="vim -c 'set ft=man' -"
 if status --is-login 
   exec startx &> /dev/null
 end
+
+export TERM=xterm

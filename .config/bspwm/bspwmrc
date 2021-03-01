@@ -10,8 +10,8 @@ polybar mainbar-bspwm &
 dunst &
 redshift -l 52.007229:5.556170 &
 nitrogen --restore & 
-
 termite & # Launch a terminal by default 
+xautolock -time 10 -locker slock &
 
 # If a ssecond monitor is connected, open second bar
 second_mon_connection=`xrandr -- query | grep "HDMI-2" | awk '{print $2}'`
@@ -60,7 +60,7 @@ bspc config presel_feedback_color		"#7d4ab0"
 
 # App Specific
 bspc rule -a "GeForce NOW" state=floating 
-bspc rule -a "Firefox" desktop='^2'
+bspc rule -a firefox desktop='^2'
 bspc rule -a "Discord" desktop='^5'
 bspc rule -a "Signal" desktop='^6'
 bspc rule -a "spotify" desktop='^7'
