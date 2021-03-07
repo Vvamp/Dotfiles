@@ -5,4 +5,5 @@ if status --is-login
   exec startx &> /dev/null
 end
 
-export TERM=xterm
+export TERM=xterm-256color
+export EDITOR=vim

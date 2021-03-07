@@ -65,3 +65,4 @@ bspc rule -a "Discord" desktop='^5'
 bspc rule -a "Signal" desktop='^6'
 bspc rule -a "spotify" desktop='^7'
 bspc rule -a "celluloid" desktop='^9'
+bspc rule -a "Zathura" state=tiled
