@@ -19,7 +19,7 @@ super + F1
 
 # terminal emulator
 super + Return
-	termite -d /home/vvamp
+	st
 
 # Launch Drun
 super + d
