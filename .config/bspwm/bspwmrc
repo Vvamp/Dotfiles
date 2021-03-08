@@ -10,7 +10,7 @@ polybar mainbar-bspwm &
 dunst &
 redshift -l 52.007229:5.556170 &
 nitrogen --restore & 
-termite & # Launch a terminal by default 
+st & # Launch a terminal by default 
 xautolock -time 10 -locker slock &
 
 # If a ssecond monitor is connected, open second bar
